@@ -1,4 +1,4 @@
-const API_KEY = '2HD83kjOvFX7E5aKKE5kTbmsvCOjVG4XwW1nXBJYqeq1IoZLrzSq5vtq';
+// env
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 const imageDisplay = document.getElementById('image-display');
@@ -20,8 +20,9 @@ searchInput.addEventListener('keydown', function(event) {
 function searchImages() {
     const query = searchInput.value;
     fetch(`https://api.pexels.com/v1/search?query=${query}`, {
+        method: 'GET',
         headers: {
-            Authorization: API_KEY ,
+            Authorization: API_KEY,
         }
     })
     .then(response => response.json())
