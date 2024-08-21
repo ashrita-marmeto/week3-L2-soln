@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="super-sale">SUPER SALE UP TO 40% OFF</div>
+        <nav>
+            <!-- Navigation bar (Shop, Community, etc.) -->
+            <div class="left-nav">
+                <a href="#" class="nav-item">SHOP</a>
+                <a href="#" class="nav-item">COMMUNITY</a>
+            </div>
+            <div class="logo">
+                <img src="./assets/images/logo.png">
+            </div>
+            <div class="right-nav">
+                <a href="#" class="nav-item">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Stock Photos</h1>
+            <p>John Wick is on the run after killing a member of the international assassins' guild, and with a $14 million price tag on his head, he is the target of hit men and women everywhere.</p>
+            <button class="btn explore-btn">
+            <span><img src="./assets/images/play.png" > </span>
+                EXPLORE</button>
+        </div>
+    </section>
+
+    <main>
+        <div class="search-section">
+            <input type="text" id="search-input" placeholder="Search for images..." autocomplete="off">
+            <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div id="image-display">
+            <!-- First image from the search result displayed here -->
+        </div>
+
+        <div class="similar-results">
+            <h2>Similar Results</h2>
+            <div id="similar-images" class="image-grid">
+                <!-- Similar images will be appended here -->
+            </div>
+        </div>
+
+        <div class="favorites-list">
+            <div class="content">
+            <h2>Favorites List</h2>
+            <button id="sort-button"><i class="fa-solid fa-arrow-up-z-a"></i></button>
+            </div>
+            <div id="favorites-images" class="image-grid">
+                <!-- Favorites images will be appended here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
