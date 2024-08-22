@@ -6,6 +6,7 @@
     <title>Image Search</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
 </head>
 <body>
     <header>
@@ -48,28 +49,41 @@
             <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
-        <div id="image-display">
+        <div id="search-results">
+            <div id="first-image">
             <!-- First image from the search result displayed here -->
-        </div>
-
-        <div class="similar-results">
-            <h2>Similar Results</h2>
-            <div id="similar-images" class="image-grid">
-                <!-- Similar images will be appended here -->
             </div>
         </div>
 
-        <div class="favorites-list">
+        <div id="similar-results">
+            <h2>Similar Results</h2>
+            <div id="similar-images" 
+            class="splide"
+            >
+            <div class="splide__track">
+                <ul class="splide__list" id="similar">
+
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div id="favorites-list">
             <div class="content">
             <h2>Favorites List</h2>
             <button id="sort-button"><i class="fa-solid fa-arrow-up-z-a"></i></button>
             </div>
-            <div id="favorites-images" class="image-grid">
-                <!-- Favorites images will be appended here -->
+            <div id="favorites-images" class="splide">
+                <div class="splide__track">
+                    <ul class="splide__list" id="favorites">
+                      <!-- Favorites images will be inserted here -->
+                    </ul>
+                  </div>
             </div>
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
